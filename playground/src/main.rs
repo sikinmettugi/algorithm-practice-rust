@@ -7,7 +7,8 @@ use boj_root::boj1;
 fn main() {
     println!("Hello, world!");
 
-    boj1::read_console_then_echo();
+    // boj1::read_console_then_echo();
+    boj1::print_army();
 }
 
 
