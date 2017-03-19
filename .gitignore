@@ -11,4 +11,6 @@ Cargo.lock
 
 playground/target/debug/.fingerprint/*
 
+playground/target/debug/depth/*
+
 playground/target/debug/playground
