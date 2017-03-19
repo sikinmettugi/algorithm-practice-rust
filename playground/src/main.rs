@@ -11,7 +11,8 @@ fn main() {
     // boj1::print_army();
 
     // boj1::print_n();
-    boj1::print_n_reverse();
+    // boj1::print_n_reverse();
+    boj1::print_n_gugudan();
 }
 
 
