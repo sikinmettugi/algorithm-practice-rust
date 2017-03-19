@@ -1,0 +1,10 @@
+[package]
+name = "playground"
+version = "0.1.0"
+authors = ["Chang-Jae Lee <sikinmettugi@gmail.com>"]
+
+[lib]
+name = "boj1"
+path = "src/lib.rs"
+
+[dependencies]
