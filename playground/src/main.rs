@@ -10,13 +10,8 @@ fn main() {
     // boj1::read_console_then_echo();
     // boj1::print_army();
 
-    boj1::print_n();
-
-    // let mut k = String::from("test");
-    // let x = 10;
-
-    // k.push_str(format!("{}", x).as_str());
-    // println!("{}", k);
+    // boj1::print_n();
+    boj1::print_n_reverse();
 }
 
 
