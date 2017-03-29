@@ -12,7 +12,9 @@ fn main() {
 
     // boj1::print_n();
     // boj1::print_n_reverse();
-    boj1::print_n_gugudan();
+    // boj1::print_n_gugudan();
+
+    boj1::solve_sugar_iteration(32);
 }
 
 
