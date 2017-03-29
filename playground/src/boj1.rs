@@ -98,3 +98,58 @@ fn calculate_sugar_bags_basis(kilogram: i32, bag: i32) -> i32 {
 
 
 }
+
+/// This implementation uses division and remainder.
+pub fn solve_sugar_iteration(target: i32) -> i32 {
+    let mut num_sugar_bags_vec: Vec<i32> = Vec::with_capacity((target + 1) as usize);
+    
+    // hard code 0 to 7: 0(0) 1(-1) 2(-1) 3(1) 4(-1) 5(1) 6(2) 7(-1)
+    num_sugar_bags_vec.push(0);
+    num_sugar_bags_vec.push(-1);
+    num_sugar_bags_vec.push(-1);
+    num_sugar_bags_vec.push(1);
+    num_sugar_bags_vec.push(-1);
+    num_sugar_bags_vec.push(1);
+    num_sugar_bags_vec.push(2);
+    num_sugar_bags_vec.push(-1);
+
+    // for elem in &num_sugar_bags_vec {
+    //     println!("elem: {}", elem);
+    // }
+
+    if target < 8 {
+        // Vec::get() returns a reference to an element or subslice
+        let result: i32 = match num_sugar_bags_vec.get(target as usize) {
+            Some(r) => *r,
+            None => -1,
+        };
+        return result;
+    }
+    else {
+        for i in 8..(target + 1) {
+            let mut val = -1;
+            if num_sugar_bags_vec[(i - 5) as usize] != -1 {
+                val = num_sugar_bags_vec[(i - 5) as usize] + 1;
+            }
+            else if num_sugar_bags_vec[(i - 3) as usize] != -1 {
+                val = num_sugar_bags_vec[(i - 3) as usize] + 1;
+            }
+
+            num_sugar_bags_vec.push(val);
+        }
+    }
+
+
+
+    let result: i32 = match num_sugar_bags_vec.get(target as usize) {
+        Some(r) => *r,
+        None => -1,
+    };
+
+    result
+}
+
+
+pub fn count_above_average_line(line: String) -> i32 {
+    unimplemented!();
+}
